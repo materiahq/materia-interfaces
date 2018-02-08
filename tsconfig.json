@@ -1,0 +1,15 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "rootDir": "./src/",
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "declaration": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+		"target": "ES6",
+	},
+	"files": [
+		"src/index.ts"
+	]
+}

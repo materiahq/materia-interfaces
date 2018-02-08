@@ -1,0 +1,26 @@
+{
+  "name": "@materia/interfaces",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "clean": "rimraf dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thyb/materia-interfaces.git"
+  },
+  "author": "Thibaud Arnault <thyb@oauth.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thyb/materia-interfaces/issues"
+  },
+  "homepage": "https://github.com/thyb/materia-interfaces#readme",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "typescript": "^2.7.1"
+  }
+}
