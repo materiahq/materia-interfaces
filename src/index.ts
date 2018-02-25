@@ -13,3 +13,9 @@ export * from "./client.model";
 export * from "./settings.model";
 export * from "./permission.model";
 export * from "./param.model";
+export * from "./git-branch.model";
+// export * from "./git-commit.model";
+export * from "./git-history.model"
+export * from "./git-remote.model";
+export * from "./git-status.model";
+export * from "./git-working-copy.model";
