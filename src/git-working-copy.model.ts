@@ -1,6 +1,6 @@
 import { IGitStatus } from "./git-status.model";
 export interface IGitWorkingCopy {
-	statuses: IGitStatus[],
+	files: IGitStatus[],
 	statusSelected: number,
 	ahead: number,
 	behind: number,
