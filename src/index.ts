@@ -20,3 +20,4 @@ export * from "./git-remote.model";
 export * from "./git-status.model";
 export * from "./git-working-copy.model";
 export * from "./git-diff.model";
+export * from "./git-response.model";
