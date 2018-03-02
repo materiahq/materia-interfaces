@@ -1,5 +1,8 @@
-export interface IGitRef {
+import { IGitDiff } from ".";
 
+export interface IGitRef {
+	name: string,
+	head: boolean
 }
 
 export interface IGitHistory {
@@ -11,6 +14,17 @@ export interface IGitHistory {
 	message: string,
 	hash: string,
 	refs: IGitRef[],
-	parents: string[],
+	parents: string,
 	changes: any[]
+}
+
+export interface IGitHistoryDetails {
+	summary: string,
+	description: string,
+	message: string,
+	changes: Array<{
+		index: string,
+		path: string,
+		diff: IGitDiff
+	}>
 }
