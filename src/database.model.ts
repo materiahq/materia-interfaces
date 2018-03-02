@@ -1,22 +1,13 @@
-export interface ISQLiteDatabase {
-	type: string,
-	storage: string,
-	live?: IDatabaseConfig
-}
-
-export interface ISQLDatabase {
+export interface IDatabaseConfig {
 	type: string,
 	host: string,
 	port: number,
 	database: string,
 	username: string,
 	password?: string,
+	storage?: string, // SQLite
 	live?: IDatabaseConfig
 }
-
-export type IDatabaseConfig
-	= ISQLiteDatabase
-	| ISQLDatabase;
 
 export interface IDatabase {
 	dev?: IDatabaseConfig,
