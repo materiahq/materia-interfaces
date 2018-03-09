@@ -1,4 +1,11 @@
-import { IEntity, IAddon, IEndpoint, IDatabase, IServerConfig, IClientBuild, IRelation } from "./index";
+import { IEntity, IAddon, IEndpoint, IDatabase, IServer, IServerConfig, IClientBuild, IRelation } from "./index";
+
+export interface IAppConfig {
+	name: string,
+	icon?: string,
+	version: string,
+	package: string
+}
 
 export interface IApp {
 	id: number
@@ -11,14 +18,14 @@ export interface IApp {
 
 	mode: string
 	live?: boolean
+	packageJson?: any,
 	// started: boolean
 
 	database?: {
 		disabled: boolean
 		config: IDatabase
 	}
-
-	server?: IServerConfig,
+	server?: IServer,
 	client?: IClientBuild,
 
 	entities?: IEntity[]

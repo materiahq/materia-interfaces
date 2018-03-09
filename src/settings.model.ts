@@ -1,4 +1,4 @@
-import { IServerConfig, IDatabase } from "./index";
+import { IServer, IDatabase } from "./index";
 
 export interface ISettingsForm {
 	general: {
@@ -10,7 +10,8 @@ export interface ISettingsForm {
 	versionning: {
 		remoteSelected: string
 	},
-	server: IServerConfig,
+	server: IServer,
+	database: IDatabase,
 	client: {
 		url: string,
 		enabled: boolean,
@@ -28,7 +29,6 @@ export interface ISettingsForm {
 			buildFolder?: string,
 			srcFolder?: string
 		}
-	},
-	database: IDatabase
+	}
 }
 

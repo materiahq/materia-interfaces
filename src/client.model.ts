@@ -12,3 +12,13 @@ export interface IClientBuild {
 	watching?: boolean,
 	buildEnabled?: boolean
 }
+
+export interface IClientConfig {
+	src?:string
+	build?:string
+	buildEnabled?: boolean
+	scripts?: {
+		[command: string]: string
+	}
+	autoWatch?: boolean
+}
