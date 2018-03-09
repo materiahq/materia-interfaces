@@ -13,12 +13,11 @@ export interface IApp {
 	name?: string
 	path: string
 	icon?: string
-	hasStatic?: boolean,
+	hasStatic?: boolean
 	url?: string
-
+	packageJson?: any
 	mode: string
 	live?: boolean
-	packageJson?: any,
 	// started: boolean
 
 	database?: {
