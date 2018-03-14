@@ -6,4 +6,7 @@ export interface IFileTree {
 	incomplete?: boolean,
 	expand?: boolean,
 	selected?: boolean
+	folders?: IFileTree[]
+	files?: IFileTree[]
+	map?: number[]
 }
