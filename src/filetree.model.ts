@@ -9,4 +9,6 @@ export interface IFileTree {
 	folders?: IFileTree[]
 	files?: IFileTree[]
 	map?: number[]
+	level: number
+	parentMap?: number[]
 }
