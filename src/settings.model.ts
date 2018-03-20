@@ -15,6 +15,7 @@ export interface ISettingsForm {
 	client: {
 		url: string,
 		enabled: boolean,
+		src?: string
 		build: {
 			enabled: boolean,
 			started: boolean,
@@ -26,8 +27,7 @@ export interface ISettingsForm {
 				watch?: string,
 				prod?: string
 			},
-			buildFolder?: string,
-			srcFolder?: string
+			dist?: string,
 		}
 	}
 }

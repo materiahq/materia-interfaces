@@ -1,24 +1,25 @@
 export interface IClientBuild {
-	srcFolder?: string,
+	src?: string,
 	scripts?: {
-		build: string,
-		watch: string,
-		prod: string
+		build?: string,
+		watch?: string,
+		prod?: string
 	},
-	buildFolder?: string,
+	buildEnabled?: boolean
+	dist?: string,
 	started?: boolean,
 	progress?: number
 	autoWatch?: boolean,
 	watching?: boolean,
-	buildEnabled?: boolean
 }
 
 export interface IClientConfig {
 	src?:string
-	build?:string
-	buildEnabled?: boolean
+	dist?:string
 	scripts?: {
-		[command: string]: string
+		build: string,
+		prod?: string,
+		watch?: string
 	}
 	autoWatch?: boolean
 }

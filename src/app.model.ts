@@ -1,4 +1,4 @@
-import { IEntity, IAddon, IEndpoint, IDatabase, IServer, IServerConfig, IClientBuild, IRelation } from "./index";
+import { IEntity, IAddon, IEndpoint, IDatabase, IServer, IServerConfig, IClientBuild, IRelation, IClientConfig } from "./index";
 
 export interface IAppConfig {
 	name: string,
@@ -25,7 +25,7 @@ export interface IApp {
 		config: IDatabase
 	}
 	server?: IServer,
-	client?: IClientBuild,
+	client?: IClientConfig,
 
 	entities?: IEntity[]
 	relations?: IRelation[]
