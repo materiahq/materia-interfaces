@@ -8,7 +8,7 @@ export interface IAppConfig {
 }
 
 export interface IApp {
-	id: number
+	id: string
 	package: string
 	name?: string
 	path: string
