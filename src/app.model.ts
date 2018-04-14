@@ -13,6 +13,7 @@ export interface IApp {
 	name?: string
 	path: string
 	icon?: string
+	loading?: boolean
 	hasStatic?: boolean
 	url?: string
 	packageJson?: any

@@ -4,6 +4,7 @@ export interface IAddon {
 	path?: string
 	config?: any
 	setupConfig?: any[]
+	banner?: string
 
 	description: string
 	logo: string
