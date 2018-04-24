@@ -4,7 +4,8 @@ export interface IAppConfig {
 	name: string,
 	icon?: string,
 	version: string,
-	package: string
+	package: string,
+	rootPassword?: string
 }
 
 export interface IApp {
@@ -19,6 +20,7 @@ export interface IApp {
 	packageJson?: any
 	mode: string
 	live?: boolean
+	rootPassword?: string
 	// started: boolean
 
 	database?: {
