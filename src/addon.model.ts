@@ -16,6 +16,7 @@ export interface IAddon {
 
 	color?: string,
 
+	enabled: boolean,
 	installed: boolean
 	installing: boolean
 
