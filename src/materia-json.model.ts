@@ -21,4 +21,5 @@ export interface IMateriaJson {
 		};
 	};
 	client?: IClientConfig;
+	links?: string[];
 }
