@@ -5,7 +5,11 @@ export interface IAppConfig {
 	icon?: string,
 	version: string,
 	package: string,
-	rootPassword?: string
+	rootPassword?: string,
+	live?: {
+		url: string,
+		rootPassword: string
+	}
 }
 
 export interface IApp {
@@ -19,8 +23,11 @@ export interface IApp {
 	url?: string
 	packageJson?: any
 	mode: string
-	live?: boolean
 	rootPassword?: string
+	live?: {
+		url: string,
+		rootPassword: string
+	}
 	// started: boolean
 
 	database?: {
