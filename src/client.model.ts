@@ -17,7 +17,7 @@ export interface IClientConfig {
 	src?:string
 	dist?:string
 	scripts?: {
-		build: string,
+		build?: string,
 		prod?: string,
 		watch?: string
 	}
