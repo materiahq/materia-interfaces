@@ -47,10 +47,11 @@ export interface IApp {
 	stack?: any
 	controllers?: Array<string>
 	models?: Array<string>
-	permissions?: {
+	permissions?: Array<{
 		description: string
 		file: string
 		name: string
 		readOnly: boolean
-	}
+		code?: string
+	}>
 }
