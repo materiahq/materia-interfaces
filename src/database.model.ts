@@ -23,3 +23,21 @@ export interface IDatabase {
 	prod?: IDatabaseConfig,
 	live?: IDatabaseConfig
 }
+
+export interface IDatabaseDiffs {
+	fields?: IDatabaseDiffActions[],
+	entities?: IDatabaseDiffActions[],
+	relations?: IDatabaseDiffActions[],
+	length?: number
+}
+
+export interface IDatabaseDiffActions {
+	redo: IDatabaseAction,
+	undo: IDatabaseAction
+}
+
+export interface IDatabaseAction {
+	type: string,
+	table: string,
+	value?: any
+}
