@@ -5,7 +5,12 @@ export interface ISettingsForm {
 		name: string,
 		package: string,
 		path: string,
-		icon: string
+		icon: string,
+		rootPassword: string,
+		live: {
+			rootPassword: string,
+			url: string
+		}
 	},
 	versionning: {
 		remoteSelected: string
