@@ -53,5 +53,6 @@ export interface IApp {
 		name: string
 		readOnly: boolean
 		code?: string
-	}>
+	}>,
+	lastZoom?: number
 }
