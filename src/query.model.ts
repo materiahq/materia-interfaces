@@ -1,3 +1,5 @@
+import { IAction } from "./action.model";
+
 export interface IQuery {
 	id: string
 	type: string
@@ -13,6 +15,7 @@ export interface IQuery {
 		model?: string
 		action?: string
 	}
+	actions?: IAction[];
 	code?: string;
 }
 

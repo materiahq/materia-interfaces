@@ -23,3 +23,4 @@ export * from "./git-diff.model";
 export * from "./git-response.model";
 export * from "./package-json.model";
 export * from "./materia-json.model";
+export * from './action.model';
