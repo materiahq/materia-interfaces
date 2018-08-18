@@ -36,6 +36,7 @@ export interface IEntity {
 	relations?: IRelation[]
 	queries?: IQuery[]
 
+	virtual?: boolean;
 	fromAddon?: any,
 	isRelation?: boolean,
 	relatedEntities?: any[]
