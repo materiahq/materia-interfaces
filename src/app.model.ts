@@ -21,6 +21,7 @@ export interface IApp {
 	loading?: boolean
 	hasStatic?: boolean
 	url?: string
+	liveUrl?: string
 	packageJson?: any
 	mode: string
 	rootPassword?: string
