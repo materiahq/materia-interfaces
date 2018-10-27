@@ -23,6 +23,7 @@ export interface IApp {
 	url?: string
 	liveUrl?: string
 	packageJson?: any
+	clientPackageJson?: any
 	mode: string
 	rootPassword?: string
 	live?: {
