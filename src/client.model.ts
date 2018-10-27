@@ -1,12 +1,12 @@
 export interface IClientBuild {
-	src?: string,
+	www?: string
 	scripts?: {
 		build?: string,
 		watch?: string,
 		prod?: string
 	},
-	buildEnabled?: boolean
-	dist?: string,
+	build?: boolean
+	packageJsonPath?: string
 	started?: boolean,
 	progress?: number
 	autoWatch?: boolean,
@@ -14,8 +14,9 @@ export interface IClientBuild {
 }
 
 export interface IClientConfig {
-	src?:string
-	dist?:string
+	www?: string
+	build?: boolean
+	packageJsonPath?: string
 	scripts?: {
 		build?: string,
 		prod?: string,
