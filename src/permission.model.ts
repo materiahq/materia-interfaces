@@ -1,8 +1,9 @@
 export interface IPermission {
 	name: string,
 	readOnly?: boolean,
-	code?: string,
 	file?: string,
-	filename?: string,
-	description?: string
+	description?: string,
+	middleware?: ((req: any, res: any, next: any) => any) | string,
+	code?: string,
+	invalid?: boolean
 }
