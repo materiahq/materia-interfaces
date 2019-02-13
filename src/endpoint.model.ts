@@ -1,4 +1,4 @@
-import { IParam } from "./param.model";
+import { IParam } from "./index";
 
 export interface IEndpoint {
 	method: string
