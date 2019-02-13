@@ -1,8 +1,9 @@
-import { IAction } from "./action.model";
+import { IConditions, IAction } from '.'
 
 export interface IQuery {
 	id: string
 	type: string
+	params?: IQueryParam[]
 	opts?: {
 		params?: IQueryParam[]
 		select?: string[]
@@ -41,4 +42,33 @@ export interface IQueryParamReference {
 export interface IQueryOrdering {
 	field: string
 	desc: boolean
+}
+
+export interface IFindAllOptions {
+	select?: Array<any>
+	include?: Array<any>
+	conditions?: Array<any>
+	limit?: number
+	offset?: number
+	page?: number
+	orderBy?: Array<string>
+}
+
+export interface IFindOneOptions {
+	select?: Array<any>
+	include?: Array<any>
+	conditions?: Array<any>
+	orderBy?: Array<string>
+}
+
+export interface ICustomQueryOptions {
+	action: string;
+	model?: string;
+	params: IQueryParam[];
+}
+
+
+export interface IUpdateQueryOptions {
+	values: any,
+	conditions: IConditions
 }

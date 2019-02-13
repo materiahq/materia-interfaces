@@ -27,3 +27,19 @@ export interface IAddon {
 
 	published: any
 }
+
+export interface IAddonTag {
+	id: string;
+}
+
+export interface IAddonInfo {
+	package: string;
+	name: string;
+	description: string;
+	logo: string;
+	author: string;
+	version: string;
+	tags: IAddonTag[];
+	enabled: boolean;
+	color: string;
+}

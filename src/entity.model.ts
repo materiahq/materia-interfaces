@@ -7,6 +7,17 @@ export interface IEndpointGeneratorOption {
 	url: string
 }
 
+export interface IVirtualEntityConfig {
+	id: string
+	x: number
+	y: number
+	fields?: Array<IField>
+	relations?: Array<any>
+	queries?: Array<any>
+	isRelation?: any
+	virtual: boolean
+}
+
 export interface IEntityConfig {
 	id: string
 	x: number

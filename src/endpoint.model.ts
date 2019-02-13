@@ -1,4 +1,3 @@
-// import { Permission } from "./permission.model";
 import { IParam } from "./param.model";
 
 export interface IEndpoint {

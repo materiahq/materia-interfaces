@@ -1,4 +1,13 @@
-import { IEntity, IAddon, IEndpoint, IDatabase, IServer, IServerConfig, IClientBuild, IRelation, IClientConfig } from "./index";
+import {
+	IEntity,
+	IAddon,
+	IEndpoint,
+	IDatabase,
+	IServer, 
+	IRelation,
+	IClientConfig,
+	IPermission
+} from "./index";
 
 export interface IAppConfig {
 	name: string,
@@ -49,12 +58,39 @@ export interface IApp {
 	stack?: any
 	controllers?: Array<string>
 	models?: Array<string>
-	permissions?: Array<{
-		description: string
-		file: string
-		name: string
-		readOnly: boolean
-		code?: string
-	}>,
+	permissions?: IPermission,
 	lastZoom?: number
+}
+
+export interface IAppOptions {
+	mode?: string,
+	runtimes?: string,
+	nocolors?: boolean,
+	level?: number,
+	silent?: boolean,
+	logSql?: boolean,
+	logRequests?: boolean,
+	prod?: boolean,
+	port?: number,
+
+	'database-host'?: string
+	'database-port'?: number
+	'database-db'?: string
+	'database-username'?: string
+	'database-password'?: string
+	storage?: string // sqlite.database
+}
+
+export interface ISaveOptions {
+	beforeSave?: (path?: string) => Object,
+	afterSave?: (lock?: Object) => void
+}
+
+export interface IApplyOptions extends ISaveOptions {
+	apply?: boolean
+	history?: boolean
+	save?: boolean
+	db?: boolean
+	wait_relations?: boolean
+	fromAddon?: IEndpoint['fromAddon']
 }
