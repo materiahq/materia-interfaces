@@ -81,12 +81,7 @@ export interface IAppOptions {
 	storage?: string // sqlite.database
 }
 
-export interface ISaveOptions {
-	beforeSave?: (path?: string) => Object,
-	afterSave?: (lock?: Object) => void
-}
-
-export interface IApplyOptions extends ISaveOptions {
+export interface IApplyOptions {
 	apply?: boolean
 	history?: boolean
 	save?: boolean
