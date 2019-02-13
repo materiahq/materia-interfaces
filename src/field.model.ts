@@ -1,6 +1,6 @@
 export interface IField {
-	name: string
-	type: string
+	name?: string
+	type?: string
 	primary?: boolean
 	required?: boolean
 	default?: boolean
@@ -8,14 +8,19 @@ export interface IField {
 	read?: boolean
 	write?: boolean
 	title?:boolean
-	isRelation?: boolean
+	isRelation?: any
 	generateFrom?: string
 	unique?: boolean | string
 	onDelete?: string
-	onUpdate: string
+	onUpdate?: string
+	component?: string
 
 	defaultValue?: any
 	validators?: Array<any>
+}
+
+export interface IFieldUpdate extends IField {
+	references?: IFieldReference
 }
 
 export interface IFieldReference {
