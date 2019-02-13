@@ -7,7 +7,7 @@ import {
     IScriptsMap,
     IDatabase,
     IClientConfig
-} from '.';
+} from './index';
 
 export interface IDependenciesConfig {
 	dev?: IDependencyMap;
@@ -21,14 +21,12 @@ export interface IEntitiesPositionConfig {
 	}
 }
 
-export interface IAddonsConfig {
-	[addon_name: string]: IAddonConfig;
+export interface IAddonConfig {
+	[param_name:string]: any
 }
 
-export interface IAddonConfig {
-	[name:string]: {
-		[param_name:string]: any
-	}
+export interface IAddonsConfig {
+	[addon_name: string]: IAddonConfig;
 }
 
 export interface IConfigOptions {
@@ -47,7 +45,10 @@ export interface IFullConfig {
 	};
 	scripts?: IScriptsMap;
 	database?: IDatabase;
-	addons?: IAddonsConfig;
+	addons?: {
+		dev?: IAddonsConfig;
+		prod?: IAddonsConfig;
+	}
 	client?: IClientConfig;
 	entitiesPosition?: IEntitiesPositionConfig;
 }

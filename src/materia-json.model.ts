@@ -1,10 +1,10 @@
 import {
-	IAppConfig,
 	IGitConfig,
 	ISessionConfig,
 	IDatabaseConfig,
 	IClientConfig,
-	IServerConfig
+	IServerConfig,
+	IAddonsConfig
 } from ".";
 
 export interface IMateriaJson {
@@ -15,11 +15,7 @@ export interface IMateriaJson {
 	server: IServerConfig;
 	session?: ISessionConfig;
 	database?: IDatabaseConfig;
-	addons?: {
-		[addon: string]: {
-			[key: string]: any;
-		};
-	};
+	addons?: IAddonsConfig;
 	client?: IClientConfig;
 	links?: string[];
 }
