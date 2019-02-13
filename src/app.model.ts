@@ -58,7 +58,7 @@ export interface IApp {
 	stack?: any
 	controllers?: Array<string>
 	models?: Array<string>
-	permissions?: IPermission,
+	permissions?: IPermission[],
 	lastZoom?: number
 }
 
