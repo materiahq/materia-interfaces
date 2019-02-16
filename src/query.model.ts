@@ -7,11 +7,11 @@ export interface IQuery {
 	opts?: {
 		params?: IQueryParam[]
 		select?: string[]
-		conditions?: any[]
+		conditions?: IConditions
 		include?: IQueryInclude[]
 		orderBy?: IQueryOrdering[]
-		page?: string
-		limit?: string
+		page?: number
+		limit?: number
 		query?: string
 		model?: string
 		action?: string
