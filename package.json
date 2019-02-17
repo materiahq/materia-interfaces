@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/materiahq/materia-interfaces.git"
   },
-  "author": "Thibaud Arnault <thyb@oauth.io>",
+  "author": "Thibaud Arnault <team@getmateria.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/materiahq/materia-interfaces/issues"
