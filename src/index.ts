@@ -24,7 +24,6 @@ export * from "./package-json.model";
 export * from "./materia-json.model";
 export * from './action.model';
 export * from './config.model';
-export * from './condition.model';
 export * from './validator';
 export * from './watcher.model';
 export * from './websocket.model';
