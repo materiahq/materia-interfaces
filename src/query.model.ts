@@ -1,15 +1,15 @@
 import { IAction } from '.';
 
 export interface IQueryCondition {
-	entity?: string
 	name: string
 	operator: string
 	value: any
+	entity?: string
 	operand?: string
 	operandPriority?: number
 }
 
-export type IQueryConditions = IQueryCondition[];
+export type IQueryConditions = IQueryCondition[]
 
 export interface IQueryParamReference {
 	entity: string
@@ -30,19 +30,28 @@ export interface IQueryInclude {
 	include?: IQueryInclude[]
 }
 
+export interface IFindAllQueryResult {
+	count: number
+	data: [],
+	pagination: {
+		limit?: number
+		page?: number
+		offset?: number
+	}
+}
+
 export interface IQueryOrdering {
 	field: string
 	desc: boolean
 }
 
 export interface IQueryValues {
-	[field: string]: string
+	[field: string]: any
 }
 
 export interface IQuery {
 	id: string
 	type: string
-	params?: IQueryParam[]
 	opts?: {
 		values?: IQueryValues
 		params?: IQueryParam[]
@@ -52,12 +61,13 @@ export interface IQuery {
 		orderBy?: IQueryOrdering[]
 		page?: number | string
 		limit?: number | string
+		offset?: number | string
 		query?: string
 		model?: string
 		action?: string
 	}
-	actions?: IAction[];
-	code?: string;
+	actions?: IAction[]
+	code?: string
 }
 
 export interface IFindAllOptions {
@@ -74,17 +84,20 @@ export interface IFindOneOptions {
 	select?: string[]
 	include?: IQueryInclude
 	conditions?: IQueryConditions
-	orderBy?: IQueryOrdering[];
+	orderBy?: IQueryOrdering[]
+}
+
+export interface IUpdateQueryOptions {
+	values: IQueryValues
+	conditions?: IQueryConditions
+}
+
+export interface IDeleteQueryOptions {
+	conditions?: IQueryConditions
 }
 
 export interface ICustomQueryOptions {
-	action: string;
-	model?: string;
-	params: IQueryParam[];
-}
-
-
-export interface IUpdateQueryOptions {
-	values: IQueryValues,
-	conditions: IQueryConditions
+	action: string
+	model: string
+	params?: IQueryParam[]
 }
