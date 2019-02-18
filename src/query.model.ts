@@ -32,7 +32,7 @@ export interface IQueryInclude {
 
 export interface IFindAllQueryResult {
 	count: number
-	data: [],
+	data: any[],
 	pagination: {
 		limit?: number
 		page?: number
