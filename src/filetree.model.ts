@@ -1,14 +1,11 @@
-export interface IFileTree {
-	filename: string,
-	path: string,
-	fullpath: string,
-	children?: Array<IFileTree>,
-	incomplete?: boolean,
-	expand?: boolean,
-	selected?: boolean
-	folders?: IFileTree[]
-	files?: IFileTree[]
-	map?: number[]
-	level: number
-	parentMap?: number[]
+export interface ITreeFile {
+	filename: string
+	path: string
+	fullpath: string
+	isDir: boolean
+	incomplete?: boolean
+	relativepath?: string
+	children?: ITreeFile[]
+	extension?: string
+	level?: number
 }
