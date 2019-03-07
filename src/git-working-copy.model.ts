@@ -5,7 +5,7 @@ export interface IGitWorkingCopy {
 	ahead: number,
 	behind: number,
 	tracking: string,
-	conflicted: boolean
+	conflicted: any[]
 	created: boolean
 	deleted: boolean
 	modified: boolean
