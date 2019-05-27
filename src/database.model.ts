@@ -1,7 +1,6 @@
 export interface ISQLiteDatabase {
 	type: string,
-	storage: string,
-	live?: IDatabaseConfig
+	storage: string
 }
 
 export interface ISQLDatabase {
@@ -11,7 +10,7 @@ export interface ISQLDatabase {
 	database: string,
 	username: string,
 	password?: string,
-	live?: IDatabaseConfig
+	ssl?: boolean
 }
 
 export type IDatabaseConfig
