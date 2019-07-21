@@ -1,7 +1,8 @@
 export interface IServerConfig {
 	port: number,
 	host?: string,
-	ssl?: boolean
+	ssl?: boolean,
+	cors?: boolean
 }
 
 export interface IServer {
