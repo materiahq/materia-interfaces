@@ -9,10 +9,10 @@ import {
 
 export interface IMateriaJson {
 	name: string;
+	server: IServerConfig;
 	icon?: string;
 	git?: IGitConfig;
 	rootPassword?: string;
-	server: IServerConfig;
 	session?: ISessionConfig;
 	database?: IDatabaseConfig;
 	addons?: IAddonsConfig;

@@ -2,10 +2,11 @@
   "name": "@materia/interfaces",
   "version": "1.0.0",
   "description": "",
+  "keywords": ["materia"],
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "build": "tsc -p . && ncp package.json dist/package.json",
+    "build": "tsc -p . && ncp package.json dist/package.json && ncp LICENSE dist/LICENSE",
     "watch": "tsc -p . -w",
     "clean": "rimraf dist/"
   },
