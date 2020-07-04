@@ -19,7 +19,8 @@ export interface IBodyParserConfig {
 		limit?: string | number,
 		parameterLimit?: number,
 		type?: string
-	}
+	},
+	limit?: string
 }
 
 export interface IServer {
